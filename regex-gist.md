@@ -152,3 +152,7 @@ And now we reach our example, `"\."`. In this part of the expression we want to 
 If we wished to search for another special character, say the question mark `"?"`, we would place it like this: `"\?"`. Same syntax goes for trying to find the backslash literal itself as well: `"\\"`.
 
 # Author
+
+My name is Taylor Turner. I am a 29 year old budding software developer living in the San Antonio area. I love to frequent coffee shops and am quite an avid listener to all genres of music. I am a bit of a firearm enthusiast and also a decent guitar player. 
+
+You can find more of my work at [bonee94 on Github](https://github.com/bonee94).
