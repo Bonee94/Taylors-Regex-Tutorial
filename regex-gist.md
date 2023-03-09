@@ -48,6 +48,19 @@ const re = /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
 
 ## Quantifiers
 
+Quantifiers are used to set the limits of the string that your regex matches (or an individual section of the string). They are also inherently greedy. Meaning that they match as many occurrences of the pattern as possible. 
+
+These limiters are used as follows:
+- `?` - Matches the pattern zero or one time
+- `*` - Matches the pattern zero or more times
+- `+` - Matches the pattern one or more times
+- `{}` - Curly brackets give three ways to set limits for a match following a `{start, stop}` syntax. 
+
+    - `{ n }` - Matches the expression exactly `n` number of times when the range starting comma and the stop point are omitted.
+    - `{ n, }` - Matches the expression at least `n` times, still omitting the stop point.
+    - `{ n, s }` - Matches the expression from a minimum of `n` times to a maximum of `s` times. 
+
+
 ## Grouping Constructs
 
 ## Bracket Expressions
