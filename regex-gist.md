@@ -139,5 +139,16 @@ For other possible options please refer to the documentation,
 
 ## Character Escapes
 
+The backslash `"\"` is a special character in a regex pattern. Its purpose is to to escape the function of another special character. Lets refer back to our original example, the second subexpression to be precise:
+
+```js
+const re = /([\da-z\.-]+)/; 
+```
+
+We can deconstruct the expression to be a bracket expression inside this second subexpression `"([ ])"`. The first backslash stating the character class for finding any Arabic numeral digit `"\d"`. Then the lowercase alphabet range `"a-z"`. 
+
+And now we reach our example, `"\."`. In this part of the expression we want to be able to search for not a backslash, but a period. but since the period carries its own functionality, we need to use the character escape to search for the literal period. This is accomplished through backslash usage, placing it right before the special character we wish to search literally for. In this example, the period `"\."`.
+
+If we wished to search for another special character, say the question mark `"?"`, we would place it like this: `"\?"`. Same syntax goes for trying to find the backslash literal itself as well: `"\\"`.
 
 # Author
