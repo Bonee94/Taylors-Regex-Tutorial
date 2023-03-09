@@ -111,6 +111,18 @@ The last three examples can each be made to do the inverse match by capitalizing
 
 ## The OR Operator
 
+Using the **OR operator** `"|"` give us the ability to use similar logic as a bracket expression but outside of it. With a bracket expression like `[a-z0-9_-]` we are searching for alphanumeric characters or two other special characters withing the pattern. 
+
+The **OR operator** lets us take our earlier example from grouping constructs:
+```
+(abc)@(123)
+``` 
+And rewrite it as:
+```
+(a|b|c)@(1|2|3)
+``` 
+Now both of the strings `"abc@123"` and `"cba@321"` would be a match. As well as `"ac@13"` and `"bc@1"` would become matches as well.
+
 ## Flags
 
 ## Character Escapes
