@@ -75,6 +75,27 @@ The first subexpression is searching for a part of a string that matches `"abc"`
 
 ## Bracket Expressions
 
+Using a set of square brackets `"[]"` represents a range of characters that we want to match. These are known as bracket expressions, or also as a positive character group because the describe the characters we want included. 
+
+Bracket Expressions can be used to include specific characters, `[mst]`, which will match against anything including those letters. Matching: `"mountain"`, `"sarah"`, `"telephone"`.
+
+For a negative character group you add the caret `"^"` to the begining of the expression inside the brackets. What this does is matches a string that doesn't contain any of the included characters. So `[^a]` would match `"bot"` but not `"bat"` 
+
+More commonly seen then either, is a hyphen `"-"`, which can be used to indicate a range between alphanumeric characters (letters and numbers only). This means that `[x-z]` and `[xyz]` will search for the same exact thing.
+
+Bringing this to the first group (or subexpression) of our example,
+
+```js
+const re = /^([a-z0-9_\.-]+)/; 
+```
+- The expression is looking for the range of letters `[a-z]`. Lower case only. If lower and upper case were desired: `[a-zA-Z]`.
+
+- The range of numbers `[0-9]`
+
+- Following the `"9"` we are looking for an underscore `"_"` , a single backslash preceding the period `"\."` which is a character escape that we wll cover later and a hyphen `"-"`.
+
+Now keep also in mind that the characters can be in any order. And do not need to have all of the characters in a string meeting this criteria. It may meet any of them.
+
 ## Character Classes
 
 ## The OR Operator
