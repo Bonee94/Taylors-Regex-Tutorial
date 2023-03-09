@@ -63,6 +63,16 @@ These limiters are used as follows:
 
 ## Grouping Constructs
 
+As a regex becomes more complicated, you may want to check multiple parts of a string for the fulfillment of different requirements in different sections. This is where **grouping constructs** come into play, as they do exactly that.
+
+The primary way to group a section is by using parentheses `"()"`. Each of these sections are known as a **subexpression**. 
+
+THe following contains two grouping constructs or subexpressions:
+```
+(abc)@(123)
+``` 
+The first subexpression is searching for a part of a string that matches `"abc"` exactly. While the second is searching for an exact match `"123"`. In between them we have an ampersand `"@"`. Subexpressions look for an exact match unless told to do otherwise. Therefore, the string `"abc@123"` would be a match whereas `"cba@321"` would not.
+
 ## Bracket Expressions
 
 ## Character Classes
