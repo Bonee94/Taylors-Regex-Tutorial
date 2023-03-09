@@ -125,6 +125,18 @@ Now both of the strings `"abc@123"` and `"cba@321"` would be a match. As well as
 
 ## Flags
 
+As we stated at the beginning of this tutorial, a regex expression should be wrapped in a set of forward slashes. The one exception to this is flags. A flag is a component that determines some additional functionality or limitation. Its placement is at the end, outside of the regex, after the second slash.
+
+There are six flags in total that can be used together or separately, and in any order. The three that are the most seen are:
+
+- `g` -- Global: the regex should be tested against all possible matches in a string.
+- `i` -- Case-insensitive: case should be ignored when trying to match against the expression.
+- `m` -- Multi-line: a multi-line string should be treated as multiple lines rather than one constant string.
+
+For other possible options please refer to the documentation,
+
+[MDN Regex Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
+
 ## Character Escapes
 
 
