@@ -32,6 +32,20 @@ console.log(re.test(exp)); // Output: true
 
 ## Anchors
 
+So let's begin with anchors. Anchors are tokens that don't match with any character, but rather assert something about the matching process. Anchors are the Caret `"^"`, it determines the matching process starts at the beginning of the string (or line). And the Dollar Symbol `"$"`, determines the process to find the final match in the string (or line).
+
+Either of which can be used to match an exact string or a range of matches using bracket expressions. The caret, matching with what follows it. And the dollar symbol with what precedes it. 
+
+Keep in mind that regex expressions are case sensitive. So in the search `^Hello`, the strings `"Hello"` and `"Hello World"` will match. But `"hello"` or `"hello y'all"` will not.  
+
+In the example below, we use both anchors. Stating that the string must start and end with what matches the expression in between.
+
+```js
+const re = /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/; 
+
+// Pattern for validating is an email format 
+```
+
 ## Quantifiers
 
 ## Grouping Constructs
